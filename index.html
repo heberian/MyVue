@@ -6,17 +6,31 @@
 </head>
 <body>
   <div id="app">
-    {{ message }}
+
+  <input type = "text" v-on:input="changeTitle" />
+
+  {{title}}
+    
   </div>
 
   <script>
 
-    var app = new Vue({
+  new Vue({
+
       el: '#app',
       data: {
-        message: 'Hello Vue!'
+
+          title : 'Hello Gokul!'
+      },
+      methods:{
+
+          changeTitle : function(event) {
+
+            this.title = event.target.value;
+          }
       }
-    })
+  });
+    
     
   </script>
 </body>
