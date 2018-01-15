@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="vue.js"></script>
+</head>
+<body>
+    <div id="myapp">
+
+     <div v-on:mouseover = "asMouseOver">{{ name }}</div>
+
+    </div> 
+
+    <script>
+
+        new Vue({
+
+            el: '#myapp',
+            data: {
+                name: 'This is mouse over event'
+            },
+            methods: {
+                asMouseOver: function() {
+                    this.name = 'Null';
+                }
+            }
+        });
+        
+    </script>
+ 
+</body>
+</html>
