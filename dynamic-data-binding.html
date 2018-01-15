@@ -1,0 +1,32 @@
+<html>
+    <head>
+       <title>VueJs Instance</title>
+       <script type = "text/javascript" src = "vue.js"></script>
+    </head>
+    <body>
+        <div id="databinding">
+
+            <component v-bind:is = "view"></component>
+
+        </div>
+        <script>
+            new Vue({
+
+                el: '#databinding',
+                data: {
+
+                    view: 'component1'
+                },
+                components: {
+
+                    'component1': {
+
+                        template: '<div><span style = "font-size:25;color:red;">Dynamic Component</span></div>'
+                    }
+                }
+
+            });
+        </script>
+    </body>
+</html>
+
