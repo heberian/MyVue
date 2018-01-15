@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="vue.js"></script>
+</head>
+<body>
+  <div id="app">
+
+  <input type = "text" v-on:input="changeTitle" />
+
+  {{title}}
+    
+  </div>
+
+  <div id="header">
+    <div  v-html = "headerMessage"></div>
+    <img v-bind:src="headerImage" />
+
+    <div id="componentTest1">
+      
+        <testcomponent></testcomponent>
+       
+
+    </div>
+    <div id="componentTest2">
+        <testcomponent></testcomponent>
+
+    </div>
+
+  </div>
+
+  <script>
+  var Vue_data = new Vue({
+      el: '#app',
+      data: {
+          title : 'Hello Gokul!'
+      },
+      methods:{
+          changeTitle : function(event) {
+            this.title = event.target.value;
+          }
+      }
+  });
+
+  new Vue({
+
+    el: '#header',
+    data: {
+
+      headerMessage: '<h1>this is header message</h1>',
+      headerImage: 'Vue.png'
+    
+    }
+
+  });
+    
+  //this is Vue component
+  Vue.component('testcomponent',{
+
+    template: '<div v-on:mouseover = "changeName()" v-on:mouseout = "originalName();"><h1>Custom Component created by <span id = "name">{{name}}</span></h1></div>',
+    data: function() {
+
+        return { name : "Gokul"}
+    },
+    methods: {
+
+        changeName: function()
+        {
+            this.name = "Gokulakrishnan";
+        },
+        originalName: function()
+        {
+            this.name = "Gokulakrishnan Mohan";
+        }
+    }
+
+  });
+
+  //use the above component
+
+  new Vue({
+    el: '#componentTest1'   
+  });
+
+  new Vue({
+      el: '#componentTest2'
+     
+  });
+  </script>
+</body>
+</html>
