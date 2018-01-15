@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="vue.js"></script>
+</head>
+<body>
+
+  <div id="mydiv">
+
+    <div v-html = "myhtmlcode"></div>
+
+  </div>
+
+  <script>
+    new Vue({
+        el: '#mydiv',
+        data: {
+
+            myhtmlcode: '<h1 style="color:red;">This is sample HTML code using v-html</h1>'
+        }
+    });
+  </script>
+
+</body>
+</html>
