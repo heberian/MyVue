@@ -1,0 +1,39 @@
+<html>
+	<head>
+	<script src = "vue.js"></script>
+	</head>
+
+	<body>
+		<div id="myapp">
+			
+			<component v-bind:is = "view"></component>
+
+		</div>
+		<script>
+			
+			new Vue({
+
+				el: '#myapp',
+				data: {
+
+					view: 'component1'
+				},
+				components: {
+
+					component1: {
+
+						template: '<h1>This is component , displayed by v-bind:is and also displaying this {{ name }} from method insdie component1',
+						
+
+							data: function()
+							{
+								return { name: 'this is gokul'}
+							}
+						
+					}
+				}
+			});
+
+		</script>
+	</body>
+</html>

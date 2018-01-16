@@ -1,0 +1,58 @@
+<html>
+	<head>
+	<script src = "vue.js"></script>
+	</head>
+
+	<body>
+
+		<div id="myapp">
+			{{ name }}
+		<mycomponent></mycomponent>
+
+		</div>
+
+		<div id="myappone">
+			{{ name }}
+			<mycomponent></mycomponent>
+			
+		</div>
+
+		<script>
+
+		Vue.component('mycomponent', {
+
+			template: '<h1 v-on:mouseover = "changeThis()" v-on:mouseout = "originalTemplate()"><span v-html = "name">{{name}}</span> </h1>',
+			data: function()
+			{
+				return { name : 'Gokul' }
+			},
+			methods: {
+
+				changeThis: function()
+				{
+					this.name = "<h2>This is h2 text</h2>";
+				},
+				originalTemplate: function()
+				{
+					this.name = "this is from my component";
+				}
+			}
+			
+		});
+
+		new Vue({
+
+			el: '#myapp'
+		});
+		new Vue({
+			el: '#myappone',
+			data: {
+				name: 'This is new name'
+			}
+		});
+			
+		</script>
+
+
+	</body>
+</html>
