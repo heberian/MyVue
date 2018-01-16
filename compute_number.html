@@ -1,0 +1,46 @@
+<html>
+	<head>
+	<script src = "vue.js"></script>
+	</head>
+
+	<body>
+
+	<div id="myapp">
+		
+		<input type = "text" v-model = "firstname" />
+		<input type="text" v-model="lastname">
+		<h1> Total : {{ getFullName }}</h1>
+		<h1>Total using Methods: {{ getTotal() }}</h1>
+
+	</div>
+	<script>
+			
+			new Vue({
+
+				el: '#myapp',
+				data: {
+
+					firstname: 0,
+					lastname: 0
+				},
+				computed:{
+
+					getFullName: function()
+					{
+						return parseInt(this.firstname)+parseInt(this.lastname);
+					}
+				},
+				methods: {
+
+					getTotal: function()
+					{
+						return parseInt(this.firstname)+parseInt(this.lastname);
+					}
+				}
+			});
+
+	</script>
+
+
+	</body>
+</html>
