@@ -7,7 +7,7 @@
 <body>
     <div id="myapp">
 
-        <input type="text" v-on:input = "asTyped" /> {{ name }}
+        <input type="text" v-on:input = "asTyped" v-model = "thisName" /> {{ thisName }}
 
     </div> 
 
@@ -17,11 +17,11 @@
 
             el: '#myapp',
             data: {
-                name: 'This is gokul'
+                thisName: 'This is gokul'
             },
             methods: {
                 asTyped: function(event) {
-                    this.name = event.target.value;
+                    this.thisName = event.target.value;
                 }
             }
         });
