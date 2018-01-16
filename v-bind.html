@@ -22,13 +22,26 @@
 
 					component1: {
 
-						template: '<h1>This is component , displayed by v-bind:is and also displaying this {{ name }} from method insdie component1',
+						template: '<h1>This is component , displayed by v-bind:is and also displaying this <span v-on:mouseover = "changeThis()" v-on:mouseout = "backToOriginal()">{{ name }} <img v-bind:src = "myimage"></img></span> from method insdie component1 <div v-html = "myhtml"></div>',
 						
 
 							data: function()
 							{
-								return { name: 'this is gokul'}
+								return { name: 'this is gokul', myimage: 'vue.png', myhtml: '<h1>All is well</h1>'}
+							},
+							methods: {
+
+								changeThis: function()
+								{
+									this.name = "changed by mouseover event";
+								},
+								backToOriginal: function()
+								{
+									this.name = 'this is gokul';
+								}
 							}
+
+
 						
 					}
 				}
