@@ -4,5 +4,42 @@
 	</head>
 
 	<body>
+
+		<div id="myapp">
+			
+				<input type="text" name ="a" v-model = "a" />
+				<input type="text" name = "b" v-model = "b" />
+				{{ sumThis }}
+				{{ Sumthis() }}
+
+		</div>
+
 	</body>
+
+	<script>
+
+		new Vue({
+			el: '#myapp',
+			data: {
+
+				a: '',
+				b: ''
+			},
+			computed:{
+
+				sumThis: function()
+				{
+					return parseInt(this.a)+parseInt(this.b);
+				}
+			},
+			methods:{
+
+				Sumthis: function()
+				{
+					return parseInt(this.a)+parseInt(this.b);
+				}
+			}
+		});
+	
+	</script>
 </html>
