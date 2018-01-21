@@ -1,0 +1,35 @@
+<html>
+	<head>
+	<script src = "vue.js"></script>
+	</head>
+
+	<body>
+
+			<div id="app">
+				
+				<h1 v-once>{{ title }}</h1>
+				<h4>{{ sayHello() }}
+				<a v-bind:href = "link">Knowtrichy</a>
+
+			</div>
+	</body>
+
+	<script>
+
+				new Vue({
+					el: '#app',
+					data: {
+						title: 'Hello World!',
+						link: 'http://www.knowtrichy.com'
+					},
+					methods: {
+						sayHello: function()
+						{
+							this.title	=	'Hello';
+							return this.title;
+						}
+					}
+				});
+	
+	</script>
+</html>
