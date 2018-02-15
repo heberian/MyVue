@@ -1,0 +1,35 @@
+<html>
+	<head>
+	<script src = "vue.js"></script>
+	</head>
+
+	<body>
+
+			<div id="app">
+
+				<button @click = "change">Change</button>
+
+				<a :href="link">Link </a>
+				
+				
+			</div>
+	</body>
+
+	<script>
+
+			new Vue({
+				el: '#app',
+				data:{
+
+					link: 'http://www.google.com'
+				},
+				methods:{
+					change: function()
+					{
+						this.link = 'http://www.apple.com';
+					}
+				}
+			});
+	
+	</script>
+</html>

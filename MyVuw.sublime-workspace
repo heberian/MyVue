@@ -3,6 +3,10 @@
 	{
 		"selected_items":
 		[
+			[
+				"compo",
+				"component1"
+			]
 		]
 	},
 	"buffers":
@@ -38,9 +42,41 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+	],
 	"file_history":
 	[
+		"/Applications/MAMP/conf/apache/extra/httpd-vhosts.conf",
+		"/Applications/MAMP/htdocs/laravel55/laravel/.env",
+		"/Applications/MAMP/htdocs/MyVue/v-two-way-binding.html",
+		"/Applications/MAMP/htdocs/MyVue/v-on-change-with-computed-properties.html",
+		"/Applications/MAMP/htdocs/MyVue/v-react-with-computed-properties-v1.html",
+		"/Applications/MAMP/htdocs/MyVue/v-counter-example.html",
+		"/private/etc/hosts",
+		"/Applications/MAMP/htdocs/MyVue/query.sql",
+		"/Applications/MAMP/htdocs/MyVue/v-bind-href-v-once.html",
+		"/Applications/MAMP/htdocs/MyVue/v-on-click.html",
+		"/Users/gokul/Downloads/codepen_bayvBd/index.html",
+		"/Users/gokul/Downloads/codepen_bayvBd/js/index.js",
+		"/Applications/MAMP/htdocs/MyVue/v-sample.html",
+		"/Applications/MAMP/htdocs/MyVue/v-html.html",
+		"/Applications/MAMP/htdocs/MyVue/myvue.html",
+		"/Applications/MAMP/htdocs/MyVue/mycomponent.html",
+		"/Applications/MAMP/htdocs/MyVue/v-bind.html",
+		"/Applications/MAMP/htdocs/MyVue/v-input.html",
+		"/Applications/MAMP/htdocs/MyVue/v-component.html",
+		"/Applications/MAMP/htdocs/MyVue/v-calc.html",
+		"/Applications/MAMP/htdocs/MyVue/computed_name.html",
+		"/Applications/MAMP/htdocs/MyVue/compute_number.html",
+		"/Applications/MAMP/htdocs/VueCli/myproject/src/main.js",
+		"/Applications/MAMP/htdocs/VueCli/myproject/src/router/index.js",
+		"/Applications/MAMP/htdocs/VueCli/myproject/src/components/HelloWorld.vue",
 		"/Applications/MAMP/htdocs/MyVue/index.html",
+		"/Applications/MAMP/htdocs/VueCli/myproject/index.html",
+		"/Applications/MAMP/htdocs/VueCli/myproject/src/components/Hello.vue",
+		"/Applications/MAMP/htdocs/VueCli/myproject/src/components/Welcome.vue",
+		"/Applications/MAMP/htdocs/VueCli/myproject/src/App.vue",
 		"/Applications/MAMP/htdocs/laravelVue/laravelvuejstutorial/.env",
 		"/Applications/MAMP/htdocs/laravelVue/laravelvuejstutorial/resources/views/welcome.blade.php",
 		"/Applications/MAMP/htdocs/laravelVue/laravelvuejstutorial/resources/assets/js/bootstrap.js",
@@ -50,7 +86,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -64,6 +100,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"clientY",
+			");\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -78,6 +116,21 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"folders":
+	[
+		{
+			"path": "/Applications/MAMP/htdocs/MyVue"
+		},
+		{
+			"path": "/Applications/MAMP/htdocs/VueCli/myproject"
+		},
+		{
+			"path": "/Users/gokul/Downloads/codepen_bayvBd"
+		},
+		{
+			"path": "/Applications/MAMP/htdocs/laravel55"
+		}
+	],
 	"groups":
 	[
 		{
@@ -88,11 +141,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 23.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -125,7 +178,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 0.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":

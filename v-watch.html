@@ -1,0 +1,51 @@
+<html>
+	<head>
+	<script src = "vue.js"></script>
+	</head>
+
+	<body>
+
+			<div id="app">
+				
+				<input type="text" v-model="valueA" value="" />
+				<br />
+				<input type="text" v-model="valueB" />
+				<br />
+				{{ result() }}
+			</div>
+	</body>
+
+	<script>
+
+				new Vue({
+					el: '#app',
+					data: {
+						valueA: 0,
+						valueB: 0,
+						answer: 0,
+					},
+					watch:{
+
+						answer: function(value)
+						{
+							var vm = this;
+
+							setTimeout(function(){
+								vm.answer = parseInt(this.valueA)+parseInt(this.valueB);
+							}, 2000);
+						}
+					},
+					methods: {
+						result()
+						{
+							this.answer =  parseInt(this.valueA)+parseInt(this.valueB);
+
+							return this.answer;
+						}
+					}
+
+					
+				});
+	
+	</script>
+</html>
