@@ -6,13 +6,38 @@
 	<body>
 
 			<div id="app">
-				
+				<button v-on:click="increase()">Increase</button>
+				<br />
+				<button v-on:click="decrease()">Decrease</button>
+				<p> Counter : {{ counter }}</p>
+				<p>Result: {{ result }}</p>
 			</div>
 	</body>
 
 	<script>
 
 				new Vue({
+
+					el: '#app',
+					data: {
+						counter: 0,
+						result: ''
+					},
+					methods: {
+
+						increase: function()
+						{
+							this.counter++;
+							this.result = this.counter > 5 ? 'Greater than 5' : 'Smaller than 5';
+						},
+
+						decrease: function() {
+
+							this.counter--;
+							this.result = this.counter > 5 ? 'Greater than 5' : 'Smaller than 5';
+						}
+					}
+
 					
 				});
 	
