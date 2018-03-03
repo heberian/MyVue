@@ -1,0 +1,47 @@
+<html>
+	<head>
+	<script src = "vue.js"></script>
+	<style>
+		.demo{
+			width:100px;
+			height:100px;
+			background-color:gray;
+			display: inline-block;
+			margin: 10px;
+		}
+		.red{
+			background-color: red;
+		}
+		.green{
+			background-color: green;
+		}
+		.blue{
+			background-color: blue;
+		}
+	</style>
+	</head>
+
+	<body>
+
+		<div id="app">
+		
+		 <button @click="attachRed = !attachRed" :class="{red: attachRed}" class="demo"></button>	
+
+		</div>
+
+			
+	</body>
+
+	<script>
+
+		 new Vue({
+		 	el: '#app',
+		 	data:{
+		 		attachRed: false
+		 	}
+		 });
+
+		
+	
+	</script>
+</html>

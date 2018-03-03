@@ -1,0 +1,48 @@
+<html>
+	<head>
+	<script src = "vue.js"></script>
+	<style>
+		.demo{
+			width:0px;
+			height:0px;
+			background-color:gray;
+			display: inline-block;
+			margin: 10px;
+		}
+		
+	</style>
+	</head>
+
+	<body>
+
+			<div id="app">
+				
+				<button class="demo" :style="{width: width+'px',height: height+'px','background-color': 'green'}"></button>
+				<button @click="ProgressThis()">Progress now</button>
+				
+				
+			</div>
+	</body>
+
+	<script>
+
+		new Vue({
+			
+			el: '#app',
+			data:{
+				progressCounter: 0,
+				width: 0,
+				height: 0,
+			},
+			methods: {
+				ProgressThis: function() {
+
+					this.progressCounter++;
+					this.width++;
+					this.height++;
+				}
+			}
+		});
+	
+	</script>
+</html>
