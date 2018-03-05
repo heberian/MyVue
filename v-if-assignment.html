@@ -1,0 +1,54 @@
+<html>
+	<head>
+	<script src = "vue.js"></script>
+	<style>
+		.demo{
+			width:0px;
+			height:0px;
+			background-color:gray;
+			display: inline-block;
+			margin: 10px;
+		}
+		
+	</style>
+	</head>
+
+	<body>
+
+			<div id="app">
+				<button @click="thisKey = !thisKey">Toggle</button>
+				<p v-if="thisKey"> This is option A</p>
+				<p v-else>This is option B</p>
+
+
+				<hr>
+					<select name="studentname">
+						<option value="">Select student</option>
+						<option v-for="student in students">{{student}}</option>
+					</select>
+				<hr>
+				<hr>
+					<h4>
+						<ul>
+								<li v-for="(student,i) in students">{{student}} ({{i}})</li>
+						</ul>
+					</h4>
+				<hr>	
+				
+			</div>
+	</body>
+
+	<script>
+
+		new Vue({
+			el: '#app',
+			data: {
+				thisKey: true,
+				students: ['Gokulakrishnan','Chidambaram','Ramesh','Bhuvanesh'],
+				
+			}
+			
+		});
+		
+	</script>
+</html>
