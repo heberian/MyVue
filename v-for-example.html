@@ -1,0 +1,65 @@
+<html>
+	<head>
+	<script src = "vue.js"></script>
+	<style>
+		.demo{
+			width:0px;
+			height:0px;
+			background-color:gray;
+			display: inline-block;
+			margin: 10px;
+		}
+		
+	</style>
+	</head>
+
+	<body>
+
+			<div id="app">
+				
+				<ul>
+					<li v-for="(ingredient,i) in ingredients" v-bind:key="ingredient">{{ ingredient }} ({{i}})</li>
+				</ul>
+				<button @click="ingredients.push('spices')">Add New</button>
+				<button @click="ingredients.pop('spices')">Remove</button>
+				<hr>
+
+				<ul>
+					<li v-for="person in persons"><!-- {{person.name}} -->
+					<div v-for="(value,key,index) in person">{{key}}: {{value}} ({{index}})</div>
+					</li>
+				</ul>
+				<ul>
+
+				</ul>
+
+				<hr>
+				<hr>
+					<span v-for="n in 10">{{n}}<br /></span>
+				<hr>
+				<template v-for="(ingredient,index) in ingredients">
+					<h1>{{ingredient}}</h1>
+					<p>{{index}}</p>
+
+				</template>
+				
+			</div>
+	</body>
+
+	<script>
+
+		new Vue({
+			el: '#app',
+			data:{
+				
+				ingredients: ['meat', 'fruit', 'cookies'],
+				persons: [
+
+					{name: 'Max',age: 27, color: 'red'},
+					{name: 'Anna', age: 'unknown', color: 'blue'}
+				]
+			}
+		});
+		
+	</script>
+</html>
